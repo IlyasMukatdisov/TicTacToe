@@ -22,7 +22,7 @@
         android:id="@+id/img_dialog_circle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/ic_circle"
+        app:srcCompat="@drawable/ic_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.5"

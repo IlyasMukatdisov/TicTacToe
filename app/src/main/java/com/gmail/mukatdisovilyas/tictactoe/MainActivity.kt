@@ -1,10 +1,11 @@
 package com.gmail.mukatdisovilyas.tictactoe
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity(), View.OnClickListener
 {
@@ -18,8 +19,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val minSide = min(Constants.SCREEN_HEIGHT, Constants.SCREEN_WIDTH)
+
+
         imgX = findViewById(R.id.img_dialog_x)
         imgCircle = findViewById(R.id.img_dialog_circle)
+
+        imgX.layoutParams.height = (minSide/2.2).toInt()
+        imgX.layoutParams.width = (minSide/2.2).toInt()
+
+        imgCircle.layoutParams.height = (minSide/2.2).toInt()
+        imgCircle.layoutParams.width = (minSide/2.2).toInt()
 
         imgX.setOnClickListener(this)
         imgCircle.setOnClickListener(this)
@@ -30,18 +40,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
     {
         when (v?.id)
         {
-            R.id.img_dialog_x ->
+            R.id.img_dialog_x      ->
             {
                 selectedSide = Constants.SIDE_X
                 val intent = Intent(this, GameActivity::class.java)
-                intent.putExtra(Constants.EXTRA_SIDE,selectedSide)
+                intent.putExtra(Constants.EXTRA_SIDE, selectedSide)
                 startActivity(intent)
             }
             R.id.img_dialog_circle ->
             {
                 selectedSide = Constants.SIDE_CIRCLE
                 val intent = Intent(this, GameActivity::class.java)
-                intent.putExtra(Constants.EXTRA_SIDE,selectedSide)
+                intent.putExtra(Constants.EXTRA_SIDE, selectedSide)
                 startActivity(intent)
             }
         }

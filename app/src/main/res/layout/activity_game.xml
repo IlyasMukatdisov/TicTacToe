@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.9"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,19 +28,25 @@
                 android:id="@+id/image1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
         </LinearLayout>
 
@@ -49,19 +59,25 @@
                 android:id="@+id/image4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
 
         </LinearLayout>
@@ -75,19 +91,25 @@
                 android:id="@+id/image7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <ImageView
                 android:id="@+id/image9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
 
         </LinearLayout>
@@ -95,12 +117,14 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -111,7 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wins:"/>
+                android:text="Wins:" />
 
         </LinearLayout>
 
@@ -124,7 +148,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loses:"/>
+                android:text="Loses:" />
 
         </LinearLayout>
 
